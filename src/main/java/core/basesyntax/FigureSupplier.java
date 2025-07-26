@@ -11,7 +11,7 @@ public class FigureSupplier {
     private final ColorSupplier colorSupplier = new ColorSupplier();
     private final Random random = new Random();
 
-    public AbstractFigure getRandomFigure() {
+    public Figure getRandomFigure() {
         int type = random.nextInt(FIGURE_TYPES);
         String color = colorSupplier.getRandomColor();
         switch (type) {
@@ -49,7 +49,7 @@ public class FigureSupplier {
         }
     }
 
-    public AbstractFigure getDefaultFigure() {
+    public Figure getDefaultFigure() {
         return new Circle(DEFAULT_COLOR, DEFAULT_RADIUS);
     }
 }

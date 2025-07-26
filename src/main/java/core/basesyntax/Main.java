@@ -4,7 +4,7 @@ public class Main {
     public static void main(String[] args) {
         int size = 6;
         FigureSupplier figureSupplier = new FigureSupplier();
-        AbstractFigure[] figures = new AbstractFigure[size];
+        Figure[] figures = new Figure[size];
 
         for (int i = 0; i < size / 2; i++) {
             figures[i] = figureSupplier.getRandomFigure();
@@ -13,7 +13,7 @@ public class Main {
             figures[i] = figureSupplier.getDefaultFigure();
         }
 
-        for (AbstractFigure figure : figures) {
+        for (Figure figure : figures) {
             figure.draw();
         }
     }
